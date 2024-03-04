@@ -1,0 +1,272 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color:#89C15E;
+  
+}
+.score{
+  margin: 50px;
+  border: 3px solid white;
+  width: 50%;
+  height:18vh;
+  margin-left: 25vw;
+  border-radius: 10px;
+  display: flex;
+  /* justify-content:flex-end; */
+  align-items: center;
+}
+.score .score-item{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.score .score-title{
+  margin: 10px;
+  font-size: 30px;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+}
+.score .score-cs, .score .score-ys{
+  background-color: #ffffff;
+  border: 2px solid white;
+  height: 80%;
+  width: 20%;
+  text-align: center;
+  font-size: 20px;
+  color: #656565;
+  border-radius: 10px;
+  margin: 10px;
+}
+.score .score-cs span,.score .score-ys span{
+  font-size: 50px;
+  color: black;
+  font-weight: 700;
+}
+
+/* triangle */
+.triangle{
+  width:0px;
+  height:0px;
+  margin: 100px auto;
+  position: relative;
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-top: 230px solid #656565;
+
+}
+.triangle:before{
+  content:"";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-top: 200px solid #89C15E ;
+  bottom:20px;
+  left:-120px;
+}
+#rules{
+  float: right;
+  font-size: 20px;
+  margin-right:40px;
+  margin-bottom: 40px;
+  border:2px solid white;
+  background-color: #89C15E;
+  width: 80px;
+  height:30px;
+  border-radius: 10px;
+  cursor: pointer;
+  /* position: fixed; */
+}
+#next{
+  float: right;
+  font-size: 20px;
+  margin-right:40px;
+  margin-bottom: 40px;
+  border:2px solid white;
+  background-color: #89C15E;
+  width: 80px;
+  height:30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#rule{
+  float: right;
+  display: none;
+  position: absolute;
+  right: 80px;
+  bottom: 200px;
+  width: 300px;
+  height: 250px;
+}
+/* .rules-container{
+  position: absolute;
+  right: 80px;
+  bottom: 200px;
+  width: 300px;
+  height: 250px;
+} */
+
+.fc,.sc,.tc{
+  position: relative;
+  display: inline-block;
+  
+}
+.sign1{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+
+.setcircle{
+  position: relative;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firstcircle{
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: none;
+  border: none;
+}
+.secondcircle{
+  position: absolute;
+  bottom: 42%;
+  right: 50%;
+  transform: translate(-50%,-50%);
+  background: none;
+  border: none;
+}
+.thirdcircle{
+  position: absolute;
+  bottom: 45%;
+  left: 60%;
+  transform: translate(-40%,-40%);
+  background: none;
+  border: none;
+}
+
+#tie,#win,#lost{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-top: 180px;
+  margin-bottom: 120px;
+}
+/* #tierock,#tiepaper,#tiescissors{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 180px;
+  margin-bottom: 120px;
+}
+#lost{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 100px;
+} */
+#win .tc,
+#win .result,
+#win .fc {
+  margin: 0 50px; 
+}
+#lost .fc,
+#lost .result,
+#lost .tc {
+  margin: 0 50px; 
+}
+#tie .sc,
+#tie .result,
+#tie .sc {
+  margin: 0 50px; 
+}
+
+#win .result h1,#tie .result h1,#lost .result h1{
+  color: #ffffff;
+  font-weight: 700;
+  font-family: 'Roboto',sans-serif;
+  text-align: center;
+}
+#lost .result h3,#win .result h3{
+  color: #ffffff;
+  font-weight: 500;
+  font-family: 'Roboto',sans-serif;
+  text-align: center;
+}
+#win .result button,#tie .result button,#lost .result button{
+  border: none;
+  background-color: #ffffff;
+  width: 130px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  color: #6B6B6B;
+}
+
+
+/* success-css */
+.success{
+  position: relative;
+  display: inline-block;
+  margin-left: 32vw;
+  margin-top: 10vh;
+}
+.cup{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  margin-top: 40px;
+}
+.hurray{
+  margin-left: 37vw;
+  color: #ffffff;
+  font-size: 80px;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.won-title{
+  margin-left: 36.5vw;
+  color: #ffffff;
+  font-size: 38px;
+  font-family: 'Roboto',sans-serif;
+}
+.play{
+  width: 150px;
+  height: 30px;
+  color: #6B6B6B;
+  border: none;
+  border-radius: 10px;
+  margin-left: 44vw;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

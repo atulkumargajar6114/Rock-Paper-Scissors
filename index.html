@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="score">
+      <div class="score-title">
+        ROCK<br>
+        PAPER<br>
+        SCISSORS
+      </div>
+      <div class="score-item">
+        <div class="score-cs">COMPUTER<br>SCORE<br><span id="dynamic-computer-won"></span></div>
+        <div class="score-ys">YOUR<br>SCORE<br><span id="dynamic-user-won"></span></div></div>
+      </div>
+    </div>
+    <div class="setcircle" id="circlenone">
+      <div class="triangle"></div>
+      <button class="firstcircle fc" onclick="
+                let computerChoice=generateComputerChoice();
+                console.log(computerChoice);
+                let result=getResult('Paper',computerChoice);">
+        <img src="images/Group 1.png">
+        <img src="images/icons8-hand-64 1.png" class="sign1">
+      </button>
+      <button class="secondcircle sc" onclick="
+          computerChoice=generateComputerChoice();
+          console.log(computerChoice);
+          result=getResult('Rock',computerChoice);">
+        <img src="images/Group 2 (1).png">
+        <img src="images/icons8-fist-67 1.png" class="sign1">
+      </button>
+      <button class="thirdcircle tc" onclick="    
+          computerChoice=generateComputerChoice();
+          console.log(computerChoice);
+          result=getResult('Scissors',computerChoice);
+      ">
+        <img src="images/Group 3 (1).png">
+        <img src="images/17911 1.png" class="sign1">
+      </button>
+    </div>
+    
+    <div id="win" style="display:none;">
+      <div class="tc" style="box-shadow: 0px 0px 10px 30px #2E9A25; border-radius: 50%; background: none;">
+        <h3 style="text-align: center; color: #ffffff;">YOU PICKED</h3>
+        <img src="images/Group 3 (1).png">
+        <img src="images/17911 1.png" class="sign1">
+      </div>
+      <div class="result">
+            <h1>YOU WIN</h1>
+            <h3>AGAINST PC</h3>
+            <button onclick="playAgain()">PLAY AGAIN</button>
+      </div>
+      
+      <div class="fc">
+        <H3 style="text-align: center; color: #ffffff;">PC PICKED</H3>
+        <img src="images/Group 1.png">
+        <img src="images/icons8-hand-64 1.png" class="sign1">
+      </div>
+      
+    </div>
+
+    <div id="lost" style="display: none;">
+      <div class="fc" >
+        <h3 style="text-align: center; color: #ffffff;">YOU PICKED</h3>
+        <img src="images/Group 1.png">
+        <img src="images/icons8-hand-64 1.png" class="sign1">
+      </div>
+      <div class="result">
+            <h1>YOU LOST</h1>
+            <h3>AGAINST PC</h3>
+            <button onclick="playAgain()">PLAY AGAIN</button>
+      </div>
+      <div class="tc" style="box-shadow: 0px 0px 10px 30px #2E9A25; border-radius: 50%;">
+        <H3 style="text-align: center; color: #ffffff;">PC PICKED</H3>
+        <img src="images/Group 3 (1).png">
+        <img src="images/17911 1.png" class="sign1">
+      </div>
+      
+    </div>
+    <div id="tie" style="display: none;">
+      <div class="sc">
+        <h3 style="text-align: center; color: #ffffff;">YOU PICKED</h3>
+        <img src="images/Group 2 (1).png">
+        <img src="images/icons8-fist-67 1.png" class="sign1">
+      </div>
+      <div class="result">
+            <h1>TIE UP</h1>
+            <button onclick="playAgain()">PLAY AGAIN</button>
+      </div>
+      <div class="sc">
+        <H3 style="text-align: center; color: #ffffff;">PC PICKED</H3>
+        <img src="images/Group 2 (1).png">
+        <img src="images/icons8-fist-67 1.png" class="sign1">
+    </div>
+      
+    </div>
+    <!-- <div id="tiepaper" style="display: none;">
+      <div class="fc">
+        <H3 style="text-align: center; color: #ffffff;">PC PICKED</H3>
+        <img src="images/Group 1.png">
+        <img src="images/icons8-hand-64 1.png" class="sign1">
+      </div>
+      <div class="result">
+            <h1>TIE UP</h1>
+            <button onclick="playAgain()">PLAY AGAIN</button>
+      </div>
+      <div class="fc">
+        <H3 style="text-align: center; color: #ffffff;">PC PICKED</H3>
+        <img src="images/Group 1.png">
+        <img src="images/icons8-hand-64 1.png" class="sign1">
+      </div>
+      
+    </div>
+
+    <div id="tiescissors" style="display: none;">
+      <div class="tc">
+        <H3 style="text-align: center; color: #ffffff;">PC PICKED</H3>
+        <img src="images/Group 3 (1).png">
+        <img src="images/17911 1.png" class="sign1">
+      </div>
+      <div class="result">
+            <h1>TIE UP</h1>
+            <button onclick="playAgain()">PLAY AGAIN</button>
+      </div>
+      <div class="tc">
+        <H3 style="text-align: center; color: #ffffff;">PC PICKED</H3>
+        <img src="images/Group 3 (1).png">
+        <img src="images/17911 1.png" class="sign1">
+      </div>
+      
+    </div> -->
+
+    <div id="rule" class="rules-container"><img src="images/Group 4 (2).png" alt="game rules"></div>
+
+    <button id="next" style="display: none;" onclick="openNextPage()">next</button>
+    <button id="rules" onclick="gameRules()">Rules</button>
+    
+    
+    
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
